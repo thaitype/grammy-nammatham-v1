@@ -3,7 +3,7 @@ import { inject } from 'inversify';
 import { UserService } from '../services/user.service';
 
 const bindings = [
-  binding.httpTrigger({ name: 'req' as const }), // make string to literal type
+  binding.httpTrigger({ name: 'req' as const, authLevel: 'anonymous'}), // make string to literal type
   binding.http({ name: 'res' as const }), // make string to literal type
 ] as const;
 
